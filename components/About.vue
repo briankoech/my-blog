@@ -17,6 +17,10 @@
 <style lang="scss" scoped>
 .card {
     margin-bottom: 1em;
+    
+    p {
+        line-height: 2em;
+    }
 }
 
 </style>
