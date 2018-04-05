@@ -1,4 +1,5 @@
 const nodeExternals = require('webpack-node-externals')
+const webpack = require('webpack')
 const resolve = (dir) => require('path').join(__dirname, dir)
 
 module.exports = {
@@ -28,10 +29,15 @@ module.exports = {
     ]
   },
   css: [
-    '~/assets/style/app.styl'
+    '~/assets/style/app.styl',
+    '~/node_modules/vue-wysiwyg/dist/vueWysiwyg.css',
+    // '~/node_modules/froala-editor/js/froala_editor.pkgd.min',
+    '~/node_modules/froala-editor/css/froala_editor.pkgd.min.css',
+    '~/node_modules/froala-editor/css/froala_style.min.css'
   ],
   plugins: [
-    '~/plugins/vuetify.js'
+    '~/plugins/vuetify.js',
+    '~/plugins/froala.js'
   ],
   router: {
     middleware: 'auth'
@@ -91,6 +97,12 @@ module.exports = {
           })
         }
       })
-    }
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        '$': 'jquery',
+        jQuery: 'jquery'
+      })
+    ]
   }
 }
