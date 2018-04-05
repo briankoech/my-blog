@@ -33,9 +33,6 @@ module.exports = {
   plugins: [
     '~/plugins/vuetify.js'
   ],
-  router: {
-    middleware: 'auth'
-  },
   /*
   ** Customize the progress bar color
   */
