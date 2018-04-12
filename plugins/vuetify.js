@@ -22,7 +22,8 @@ import {
   VDivider,
   VDataTable,
   VCheckbox,
-  VSelect
+  VSelect,
+  VSnackbar
 } from 'vuetify'
 
 Vue.use(Vuetify, {
@@ -47,6 +48,7 @@ Vue.use(Vuetify, {
     VDivider,
     VDataTable,
     VCheckbox,
-    VSelect
+    VSelect,
+    VSnackbar
   }
 })

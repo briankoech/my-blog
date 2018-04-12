@@ -8,7 +8,7 @@
             </v-toolbar-title>
         </router-link>
         <v-spacer></v-spacer>
-        <v-toolabar-side-icon class="hidden-md-and-up"></v-toolabar-side-icon>
+        <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
         <v-toolbar-items class="hidden-sm-and-down">
             <v-btn flat>
                 <router-link to="/blog">

@@ -12,6 +12,13 @@
         </v-btn>
       </div>
     </v-flex>
+     <v-snackbar
+      :timeout="timeout"
+      :bottom="true"
+      v-model="error"
+    >
+      {{ error }}
+    </v-snackbar>
   </v-layout>
 </template>
 
@@ -22,19 +29,22 @@ import * as types from '@/store/types'
 
 export default {
   layout: 'login',
+  data: () => ({
+    timeout: 4000
+  }),
   computed: {
     loading () {
-      return this.$store.state.loading
+      return this.$store.state.admin.loading
+    },
+    error () {
+      return this.$store.state.admin.error
     }
   },
+  watch: { },
   methods: {
     async googleSignUpPopup () {
-      console.log(this.$store)
-      const res = await this.$store.dispatch(types.SIGN_IN_WITH_GOOGLE_POPUP)
-      if (res) this.$router.replace('/admin')
-    },
-    setCommand () {
-      document.execCommand('formatBlock', false, 'h1')
+      const res = await this.$store.dispatch(`admin/${types.SIGN_IN_WITH_GOOGLE_POPUP}`)
+      if (res) this.$router.push('admin')
     }
   }
 }

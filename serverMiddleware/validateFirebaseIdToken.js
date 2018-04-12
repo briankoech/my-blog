@@ -1,3 +1,4 @@
+const axios = require('axios')
 global.XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 
 const getIdTokenFromRequest = (req, res) => {
@@ -14,14 +15,18 @@ const getIdTokenFromRequest = (req, res) => {
 
 const addDecodedIdTokenToRequest = async (idToken, req, next) => {
   try {
-    console.log(idToken)
-    /*
-     *const { name, email, uid, picture } = await admin.auth().verifyIdToken(idToken) || {}
-    */
-    req.user = { name: 'Brian', email: 'brnkoech', uid: '2143433', picture: 'avatar_url' }
-    next()
+    try {
+      const url = `http://localhost:5000/my-blog-c782c/us-central1/Auth?x-access-token=${idToken}`
+      const { data } = await axios.get(url)
+      const { name, picture, email, uid } = data
+      req.user = { name, picture, email, uid }
+      next()
+    } catch (e) {
+      // const { response, request, message } = e
+      console.log(e)
+      next()
+    }
   } catch (e) {
-    console.log('error decoding token', e)
     next()
   }
 }

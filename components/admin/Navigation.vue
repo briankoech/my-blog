@@ -37,12 +37,12 @@ export default {
       {
         title: 'About',
         icon: 'account_box',
-        link: 'about'
+        link: 'admin/about'
       },
       {
         title: 'Posts',
         icon: 'chrome_reader_mode',
-        link: 'posts'
+        link: 'admin/posts'
       },
       {
         title: 'Proficiency',
