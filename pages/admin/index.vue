@@ -1,7 +1,7 @@
 <template>
   <div>
     Admin page
-    <froala :tag="'textarea'" :config="config" v-model="model"></froala>
+    <editor></editor>
   </div>
 </template>
 
@@ -10,24 +10,31 @@
 </style>
 
 <script>
+import Editor from '@/components/admin/Editor'
 
 export default {
   name: 'admin-page',
+  components: {
+    Editor
+  },
   data () {
     return {
-      myHTML: '',
-      config: {
-        events: {
-          'froalaEditor.initialized': function () {
-            console.log('initialized')
-          }
-        }
-      },
       model: 'Edit Your Content Here!'
     }
   },
   asyncData (context) {
     return { name: 'Brian' }
+  },
+  methods: {
+    setCommand (command) {
+      // this.$refs.text.select()
+      try {
+        console.log('setComand', command)
+        document.execCommand('formatBlock', false, command)
+      } catch (e) {
+        console.log(e)
+      }
+    }
   },
   layout: 'admin'
 }

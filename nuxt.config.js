@@ -1,6 +1,7 @@
 const nodeExternals = require('webpack-node-externals')
 const webpack = require('webpack')
 const resolve = (dir) => require('path').join(__dirname, dir)
+const cookieParser = require('cookie-parser')
 
 module.exports = {
   /*
@@ -30,14 +31,19 @@ module.exports = {
   },
   css: [
     '~/assets/style/app.styl',
-    '~/node_modules/vue-wysiwyg/dist/vueWysiwyg.css',
-    // '~/node_modules/froala-editor/js/froala_editor.pkgd.min',
-    '~/node_modules/froala-editor/css/froala_editor.pkgd.min.css',
-    '~/node_modules/froala-editor/css/froala_style.min.css'
+    'quill/dist/quill.snow.css',
+    'quill/dist/quill.bubble.css',
+    'quill/dist/quill.core.css'
+  ],
+  serverMiddleware: [
+    cookieParser(),
+    '~/serverMiddleware/validateFirebaseIdToken.js'
   ],
   plugins: [
     '~/plugins/vuetify.js',
-    '~/plugins/froala.js'
+    { src: '~/plugins/firebase-client-init.js', ssr: false },
+    { src: '~/plugins/vue-quill-plugin.js', ssr: false },
+    { src: '~/plugins/auth-cookie.js', ssr: false }
   ],
   router: {
     middleware: 'auth'
