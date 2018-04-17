@@ -1,29 +1,32 @@
 <template>
-    <v-card>
-        <v-card-title justify-center>
-            <v-layout row justify-center>
-                <div class="headline">Proficiency</div>
-            </v-layout>
-        </v-card-title>
-        <v-layout class="pt-0 pa-4" row wrap justify-space-around>
-            <img src="/js-images/js.svg" alt="">
-            <img src="/angular-images/angular.svg" alt="">
-            <img src="/vue-images/vue.svg" alt="">
-            <img src="/react-images/react.svg" alt="">
-            <img src="/nodejs-images/nodejs-icon.svg" alt="">
+    <div class="proficiency">
+        <v-layout row justify-start>
+            <h3>Proficiency</h3>
         </v-layout>
-    </v-card>
+        <v-layout class="pt-4 pr-4 pb-4 pl-0" row wrap justify-start>
+            <img class="mr-5" src="/js.svg" alt="">
+            <img class="mr-5" src="/angular.svg" alt="">
+            <img class="mr-5" src="/vue.svg" alt="">
+            <img class="mr-5" src="/react.svg" alt="">
+            <img class="mr-5" src="/nodejs-icon.svg" alt="">
+        </v-layout>
+    </div>
 
 </template>
 
 <style scoped lang="scss">
 
-.card {
-    margin-bottom: 1em;
+.proficiency {
+  margin-bottom: 1em;
 
-    img {
-        height: 50px;
-    }
+  h3 {
+      color: #d24241;
+      font-size: 2rem;
+  }
+
+  img {
+      height: 50px;
+  }
 }
 </style>
 <script>

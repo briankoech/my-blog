@@ -2,13 +2,7 @@
   <v-app>
       <!--navigation-->
       <v-toolbar app fixed>
-        <router-link to="/">
-            <v-toolbar-title>
-                Egoless Dev
-            </v-toolbar-title>
-        </router-link>
         <v-spacer></v-spacer>
-        <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
         <v-toolbar-items class="hidden-sm-and-down">
             <v-btn flat>
                 <router-link to="/blog">
@@ -17,7 +11,7 @@
             </v-btn>
             <v-btn flat>
                 <router-link to="/new">
-                    New
+                    Portfolio
                 </router-link>
             </v-btn>
         </v-toolbar-items>
@@ -30,9 +24,27 @@
             <nuxt />
           </v-container>
       </v-content>
+
   </v-app>
 </template>
 
-<style>
+<style lang="scss" scoped>
+.toolbar {
+  background: #a92a2a;
+  color: #fff;
 
+  .toolbar-content {
+    background: #a92a2a;
+    color: #fff;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
 </style>
+
+<script>
+
+</script>

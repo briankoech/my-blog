@@ -16,10 +16,6 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css'
-      },
       { rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       },
@@ -104,11 +100,6 @@ module.exports = {
         }
       })
     },
-    plugins: [
-      new webpack.ProvidePlugin({
-        '$': 'jquery',
-        jQuery: 'jquery'
-      })
-    ]
+    plugins: []
   }
 }
