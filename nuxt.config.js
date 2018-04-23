@@ -36,7 +36,7 @@ module.exports = {
     '~/serverMiddleware/validateFirebaseIdToken.js'
   ],
   plugins: [
-    '~/plugins/vuetify.js',
+    { src: '~/plugins/vuetify.js', ssr: true },
     { src: '~/plugins/firebase-client-init.js', ssr: false },
     { src: '~/plugins/vue-quill-plugin.js', ssr: false },
     { src: '~/plugins/auth-cookie.js', ssr: false }

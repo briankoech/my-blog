@@ -1,71 +1,42 @@
 <template>
-    <div class="social">
-        <v-layout row justify-start>
-            <h3>Follow Me!</h3>
-        </v-layout>
-        <v-layout row justify-start class="social-media">
-          <v-tooltip top>
-              <v-icon slot="activator">fa fa-twitter</v-icon> 
-              <span>egolessDev</span>
-          </v-tooltip>
-          <v-tooltip top column align-start>
-              <v-icon slot="activator">fa fa-github</v-icon> 
-              <span>briankoech</span>
-          </v-tooltip>
-          <v-tooltip top column align-start>
-              <v-icon slot="activator">fa fa-linkedin</v-icon> 
-              <span>briankoech</span>
-          </v-tooltip>
-          <v-tooltip top column align-start>
-              <v-icon slot="activator">fa fa-facebook</v-icon> 
-              <span>briankoech</span>
-          </v-tooltip>
-        </v-layout>
-    </div>
-
+  <div class="social-media">
+    <a href="https://www.twitter.com/egolessDev" target="_blank" class="fa fa-twitter"></a>
+    <a href="https://www.github.com/briankoech" target="_blank" class="fa fa-github"></a>
+    <a href="https://www.linkedin.com/briankoech" target="_blank" class="fa fa-linkedin"></a>
+    <a href="https://www.facebook.com/brian.kirwa" target="_blank" class="fa fa-facebook"></a>
+  </div>
 </template>
 
 <style scoped lang="scss">
-.social {
-    margin-bottom: 1em;
+.social-media {
+  .fa {
+    padding: 10px;
+    font-size: 21px;
+    margin: 4px 1px;
+    width: 41px;
+    text-align: center;
+    text-decoration: none;
+  }
 
-    h3 {
-      color: #d24241;
-      font-size: 2rem;
-      margin-bottom: .5em;
-    }
+  .fa-twitter {
+    background: #55ACEE;
+    color: #fff;
+  }
 
-    .sociial-icon {
-      width: 50px;
-      height: 50px;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 10px;
-    }
+  .fa-linkedin {
+    background: #007bb5;
+    color: #fff;
+  }
 
-    i {
-      width: 40px;
-      height: 40px;
-      margin: 10px 10px 10px 0;
-      color: #fff;
-    }
-    .fa-twitter {
-      background: #55ACEE;
-    }
+  .fa-github {
+    background: #555555;
+    color: #fff;
+  }
 
-    .fa-linkedin {
-      background: #007bb5;
-    }
-
-    .fa-github {
-      background: #555555;
-    }
-
-    .fa-facebook {
-      background: #3B5998;
-    }
+  .fa-facebook {
+    background: #3B5998;
+    color: #fff;
+  }
 }
 </style>
 <script>

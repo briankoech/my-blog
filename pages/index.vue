@@ -14,7 +14,10 @@
             <v-flex xs10 md10 lg7>
                 <About />
                 <Proficiency />
-                <SocialMedia />
+                <v-layout column class="social" justify-start align-start>
+                  <h3>Follow Me</h3>
+                  <SocialMedia />
+                </v-layout>
             </v-flex>
         </v-layout>
     </div>
@@ -40,6 +43,13 @@
 }
 .content-holder {
     position: relative;
+
+    .social {
+      h3 {
+        color: #d24241;
+        font-size: 2rem;
+      } 
+    }
 }
 </style>
 <script>

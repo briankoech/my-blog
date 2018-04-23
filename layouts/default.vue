@@ -2,19 +2,29 @@
   <v-app>
       <!--navigation-->
       <v-toolbar app fixed>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-          <router-link class="nav-link" to="blog">
-            <v-btn flat>
-                Blog
-            </v-btn>
-          </router-link>
-          <router-link class="nav-link" to="portfolio">
-            <v-btn flat>
-                Portfolio
-            </v-btn>
-          </router-link>
-        </v-toolbar-items>
+        <v-container>
+          <v-layout row justify-center>
+            <router-link class="nav-link" to="/">
+              <v-btn flat>
+                Egoless Developer
+              </v-btn>
+            </router-link>
+
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+              <router-link class="nav-link" to="blog">
+                <v-btn flat>
+                    Blog
+                </v-btn>
+              </router-link>
+              <router-link class="nav-link" to="portfolio">
+                <v-btn flat>
+                    Portfolio
+                </v-btn>
+              </router-link>
+            </v-toolbar-items>
+          </v-layout>
+        </v-container>
       </v-toolbar>
       <!--navigation-->
       
@@ -39,6 +49,10 @@
   .toolbar__content {
     background: #a92a2a;
     color: #fff;
+
+    .container {
+      margin: 0 auto;
+    }
 
     .nav-link {
       text-decoration: none;
