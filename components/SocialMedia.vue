@@ -1,9 +1,9 @@
 <template>
   <div class="social-media">
-    <a href="https://www.twitter.com/egolessDev" target="_blank" class="fa fa-twitter"></a>
-    <a href="https://www.github.com/briankoech" target="_blank" class="fa fa-github"></a>
-    <a href="https://www.linkedin.com/briankoech" target="_blank" class="fa fa-linkedin"></a>
-    <a href="https://www.facebook.com/brian.kirwa" target="_blank" class="fa fa-facebook"></a>
+    <a target="_blank" href="https://www.twitter.com/egolessDev" class="fa fa-twitter"></a>
+    <a target="_blank" href="https://www.github.com/briankoech" class="fa fa-github"></a>
+    <a target="_blank" href="https://www.linkedin.com/in/brian-koech-138a2a5b" class="fa fa-linkedin"></a>
+    <a target="_blank" href="https://www.facebook.com/brian.kirwa" class="fa fa-facebook"></a>
   </div>
 </template>
 

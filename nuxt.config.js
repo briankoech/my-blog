@@ -8,11 +8,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Brian Koech',
+    title: 'Brian Koech - Software Developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Brian Koech software developer kenya Engineer Andela' }
+      { hid: 'description', name: 'description', content: 'Brian Koech is a Software Developer from Nairobi Kenya. He sometimes calls himself the Egoless Developer and abides by the principles of being and Egoless Developer. He loves coding in Javascript and JS Frameworks. i.e. NodeJs, Angular 2/4/5, VueJs, ReactJs and anything JS. He is a team player and passionate about leading teams.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -31,6 +31,9 @@ module.exports = {
     'quill/dist/quill.bubble.css',
     'quill/dist/quill.core.css'
   ],
+  env: {
+    CLOUD_FUNCTION_URL: process.env.CLOUD_FUNCTION_URL || 'http://localhost:5000/my-blog-c782c/us-central1/'
+  },
   serverMiddleware: [
     cookieParser(),
     '~/serverMiddleware/validateFirebaseIdToken.js'
@@ -52,6 +55,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: true,
     babel: {
       plugins: [
         [

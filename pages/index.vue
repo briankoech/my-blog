@@ -58,9 +58,6 @@ import Proficiency from '../components/Proficiency'
 import SocialMedia from '../components/SocialMedia'
 
 export default {
-  head: {
-    title: 'Home'
-  },
   components: {
     About,
     Proficiency,

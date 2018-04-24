@@ -17,11 +17,6 @@
                     Blog
                 </v-btn>
               </router-link>
-              <router-link class="nav-link" to="portfolio">
-                <v-btn flat>
-                    Portfolio
-                </v-btn>
-              </router-link>
             </v-toolbar-items>
           </v-layout>
         </v-container>

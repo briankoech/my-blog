@@ -16,7 +16,7 @@ const getIdTokenFromRequest = (req, res) => {
 const addDecodedIdTokenToRequest = async (idToken, req, next) => {
   try {
     try {
-      const url = `http://localhost:5000/my-blog-c782c/us-central1/Auth?x-access-token=${idToken}`
+      const url = `${process.env.CLOUD_FUNCTION_URL}/Auth?x-access-token=${idToken}`
       const { data } = await axios.get(url)
       const { name, picture, email, uid } = data
       req.user = { name, picture, email, uid }
